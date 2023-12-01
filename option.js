@@ -1,6 +1,7 @@
 const selectMonth = document.getElementById("month-of-expiration");
 const selectYear = document.getElementById("year-of-expiration");
 const cardExpire = document.querySelector("#expire-card")
+const divExpire = document.querySelector("#info-expire")
 
 const months = [
     "01", "02", "03", "04", "05", "06",
@@ -45,6 +46,21 @@ const addYear = () =>{
         cardExpire.textContent = updatedText; 
     }
 };
+
+const addBorderOption = () => {
+    divExpire.classList.add("border-name");
+    };
+        
+    const removeBorderOption = () => {
+    divExpire.classList.remove("border-name");
+    };
+        
+        
+       
+    selectMonth.addEventListener('focus' ,addBorderOption)
+    selectMonth.addEventListener('blur' ,removeBorderOption)
+    selectYear.addEventListener('focus' ,addBorderOption)
+    selectYear.addEventListener('blur' ,removeBorderOption)
 
 selectYear.addEventListener("change" , addYear)
 selectMonth.addEventListener("change" , addMonth)

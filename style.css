@@ -6,7 +6,6 @@ body {
     height: 100vh;
     margin: 0;
 }
-
 #container {
     background-color: white;
     border: 1px solid #ccc;
@@ -21,15 +20,12 @@ body {
     position: absolute; 
     z-index: 0; 
 }
-
 #card-number {
     padding-top: 150px;
 }
-
 h5 {
     margin-bottom: 1px;
 }
-
 input, select {
     margin-bottom: 2px;
     padding: 8px;
@@ -41,25 +37,19 @@ input:focus, select:focus {
     box-shadow: 5px 5px 10px 0px #66b6f2;
 }
  .error:focus {
-   
     border: 2px solid red;
     box-shadow: 5px 5px 10px 0px red;
 }
-
-
 #err {
     color: white;
 }
-
 select {
     width: 110px;
 }
-
 #selection-div {
     display: flex;
     justify-content: space-between;
 }
-
 #btn {
     background-color: #1306cc;
     margin-top: 30px;
@@ -70,6 +60,7 @@ select {
     border: 1px solid #c0eefc;
     border-radius: 4px;
     box-shadow: 5px 5px 10px 0px #66b6f2;
+    cursor: pointer;
 }
 .flip {
 }
@@ -90,22 +81,17 @@ select {
     z-index: 3; 
     border-radius: 8px;
    }
-  
-
-#card-bancar-front {
+  #card-bancar-front {
     z-index: 4;
     transform: rotateY(0deg);
     backface-visibility: hidden;
 }
-
 #card-bancar-back {
     transform: rotateY(-180deg);
-    
 }
 .flip .container-card  {
 	transform: rotateY(-180deg);
 }
- 
 img{
     width: 50px;
 }
@@ -117,34 +103,42 @@ img{
    justify-content:space-between;
    padding: 15px;
 }
-h2{
+#card-number-text{
     color: white;
     font-size: 30px;
-   margin-left: 30px;
+   margin-left: 10px;
 }
 #info-owner-expire {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.info {
-    display: flex;
-    flex-direction: column;
-   margin-left: 25px;
-   margin-right: 25px;
+#info-owner{
+    width: 210px;
+    margin-left:20px;
+    height: 45px;
+    padding-left: 10px;
+    padding-left: 10px;
 }
-
+#info-expire{
+    margin-right:20px ;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.border-name{
+    border: 1px solid #c0eefc;
+    border-radius: 4px;
+   }
 .info-card-text {
-    font-size: 12px;
+    font-size: 14px;
     margin: 0;
     color: white;
 }
 h3 {
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
     color: white;
 }
-
 #black-bg{
     background-color: black;
     width: 100%;
@@ -166,4 +160,15 @@ h3 {
     margin: 0;
     margin-left: 300px;
     margin-top:30px ;
-   }
+}
+#card-number-text{
+    padding-left:18px ;
+    width: 280px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.border{
+    border: 1px solid #c0eefc;
+    border-radius: 4px;
+}

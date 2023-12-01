@@ -3,6 +3,8 @@ const numberCard = document.querySelector("#card-number-text");
 
 
 const validCardNumber = () => {
+
+    
     const inputValue = inputNumber.value.replace(/\s/g, ''); 
     
     if (!/^\d+$/.test(inputValue)) {
@@ -24,8 +26,19 @@ const validCardNumber = () => {
   inputNumber.value = formattedValue;
 
   numberCard.textContent = inputValue !== '' ? formattedValue : lastNumberCardValue;
-    lastNumberCardValue = numberCard.textContent;
+    lastNumberCardValue = "#### #### #### ####";
 };
 
+const addBorder = () => {
+numberCard.classList.add("border")
+};
+
+const removeBorder = () => {
+numberCard.classList.remove("border")
+};
+
+
 inputNumber.addEventListener('input',validCardNumber)
+inputNumber.addEventListener('focus',addBorder)
+inputNumber.addEventListener('blur',removeBorder)
    
