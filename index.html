@@ -7,39 +7,42 @@
     <title>Card Bancar</title>
 </head>
 <body>
-
-<div class="card-bancar" id="card-bancar-front">
-     <div id="cip-logo">
-       <img src="img/cip.png" alt="cip">
-       <img src="img/visaLogo.png" alt="visa" class="logo-img">
-        <!-- <img src="img/masterCard.png" alt="master" class="logo-img">  -->
+<div class="" id="flip">
+    <div class="container-card">
+        <div class="card" id="card-bancar-front">
+            <div id="cip-logo">
+                <img src="img/cip.png" alt="cip">
+                <img src="img/visaLogo.png" alt="visa" class="logo-img">
+                <!-- <img src="img/masterCard.png" alt="master" class="logo-img">  -->
+            </div>
+            
+            <div id="info-card">
+                
+                <h2 id="card-number-text">#### #### #### ####</h2>
+                
+                <div id="info-owner-expire">
+                    <div id="info-owner" class="info">
+                        <h5 class="info-card-text">Card owner</h5>
+                        <h3 id="card-name-text">Name</h3>
+                    </div>
+                    
+                    <div id="info-expire" class="info">
+                        <h5 class="info-card-text">Expires</h5>
+                        <h3 id="expire-card">MM/YY</h3>
+                    </div>
+                </div>
+            </div>  
+            
+        </div>
+        <div class="card" id="card-bancar-back">
+            <div id="black-bg"></div>
+            <h4 id="card-cvv">CVV</h4>
+                <div id="cvv-input">
+                    <h4 id="cvv-card">###</h4>
+                </div>
+        </div>
     </div>
-
-    <div id="info-card">
-
-     <h2 id="card-number-text">xxxx xxxx xxxx xxxx</h2>
-
-        <div id="info-owner-expire">
-            <div id="info-owner" class="info">
-                <h5 class="info-card-text">Card owner</h5>
-                <h3 id="card-name-text">Name</h3>
-            </div>
-
-            <div id="info-expire" class="info">
-                <h5 class="info-card-text">Expires</h5>
-                <h3 id="expire-card">MM/YY</h3>
-            </div>
-        </div>
-    </div>  
-   
 </div>
-<!-- <div class="card-bancar" id="card-bancar-back">
-    <div id="black-bg"></div>
-    <h4 id="card-cvv">CVV</h4>
-        <div id="cvv-input">
-            <h4>###</h4>
-        </div>
-</div> -->
 
     <div id="container" >
        
@@ -64,7 +67,7 @@
             </div>
             <div id="cvv-div">
                 <h5>CVV</h5>
-                <input type="text" id="cvv" maxlength="3">
+                <input type="text" id="cvv" maxlength="3" class="">
             </div>
         </div>
 
@@ -75,5 +78,5 @@
 <script src="numbercard.js"></script>
 <script src="option.js"></script>
 <script src="namecard.js"></script>
-
+<script src="cvv.js"></script>
 </html>

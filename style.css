@@ -18,8 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     align-self: center;
-    position: relative; 
-    z-index: 1; 
+    position: absolute; 
+    z-index: 0; 
 }
 
 #card-number {
@@ -71,19 +71,41 @@ select {
     border-radius: 4px;
     box-shadow: 5px 5px 10px 0px #66b6f2;
 }
-
-
-.card-bancar {
+.flip {
+}
+.container-card{
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: 3;
+    width: 350px;
+    height: 210px;
+    bottom: 200px;
+    transition: all 0.8s ease 0s;
+}
+.card {
     background-image: url("/img/bgcard.jpg");
     width: 350px;
     height: 210px;
     position: absolute; 
-    top: 50px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    z-index: 2; 
+    z-index: 3; 
     border-radius: 8px;
+   }
+  
+
+#card-bancar-front {
+    z-index: 4;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
 }
+
+#card-bancar-back {
+    transform: rotateY(-180deg);
+    
+}
+.flip .container-card  {
+	transform: rotateY(-180deg);
+}
+ 
 img{
     width: 50px;
 }
@@ -143,5 +165,5 @@ h3 {
     font-size: 12px;
     margin: 0;
     margin-left: 300px;
-margin-top:30px ;
+    margin-top:30px ;
    }
