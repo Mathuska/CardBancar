@@ -1,33 +1,32 @@
 const inputNumber = document.querySelector("#card-number-input");
 const numberCard = document.querySelector("#card-number-text");
-
+let lastNumberCardValue = "#### #### #### ####";
 
 const validCardNumber = () => {
-
-    
-    const inputValue = inputNumber.value.replace(/\s/g, ''); 
+    const inputValue = inputNumber.value.replace(/\s/g, '');
     
     if (!/^\d+$/.test(inputValue)) {
         inputNumber.classList.add("error")
     }else{
         inputNumber.classList.remove("error")
     }
-    
     let formattedValue = '';
-    
+
     for (let i = 0; i < inputValue.length; i++) {
 
         if (i > 0 && i % 4 === 0) {
             formattedValue += ' ';  
-        }
-        formattedValue += inputValue[i];
-        
-    }
-  inputNumber.value = formattedValue;
+           }
+formattedValue += inputValue[i];
+}
+    inputNumber.value = formattedValue;
+    let lengtOfNumber = 38 - formattedValue.length
+    let lengtOfNumberCard =  lastNumberCardValue.slice(formattedValue.length,lengtOfNumber)
 
-  numberCard.textContent = inputValue !== '' ? formattedValue : lastNumberCardValue;
-    lastNumberCardValue = "#### #### #### ####";
+numberCard.textContent = inputValue !== '' ? formattedValue + lengtOfNumberCard : lastNumberCardValue;
+
 };
+
 
 const addBorder = () => {
 numberCard.classList.add("border")
