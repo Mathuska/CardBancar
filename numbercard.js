@@ -20,6 +20,7 @@ const validCardNumber = () => {
 formattedValue += inputValue[i];
 }
     inputNumber.value = formattedValue;
+    console.log(formattedValue);
     let lengtOfNumber = 38 - formattedValue.length
     let lengtOfNumberCard =  lastNumberCardValue.slice(formattedValue.length,lengtOfNumber)
 
@@ -29,11 +30,11 @@ numberCard.textContent = inputValue !== '' ? formattedValue + lengtOfNumberCard 
 
 
 const addBorder = () => {
-numberCard.classList.add("border")
+numberCard.classList.add("border-name")
 };
 
 const removeBorder = () => {
-numberCard.classList.remove("border")
+numberCard.classList.remove("border-name")
 };
 
 
