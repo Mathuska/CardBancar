@@ -3,10 +3,12 @@ const cardName = document.querySelector("#card-name-text")
 const divOwner = document.querySelector("#info-owner")
 
 const writeCardName = () =>{
-    const name = inputName.value.replace(/\s/g, ''); 
+    const name = inputName.value.toUpperCase()
 
     if (name === "") {
       cardName.textContent = "Name"; 
+  }else if(name === " ") {
+      cardName.textContent = name + " ";
   } else {
       cardName.textContent = name;
   }

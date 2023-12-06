@@ -2,15 +2,20 @@ const inputNumber = document.querySelector("#card-number-input");
 const numberCard = document.querySelector("#card-number-text");
 let lastNumberCardValue = "#### #### #### ####";
 
+inputNumber.addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9]/g, '');
+});
+
 const validCardNumber = () => {
     const inputValue = inputNumber.value.replace(/\s/g, '');
     
-    if (!/^\d+$/.test(inputValue)) {
-        inputNumber.classList.add("error")
-    }else{
-        inputNumber.classList.remove("error")
-    }
-    let formattedValue = '';
+    // if (!/^\d+$/.test(inputValue)) {
+    //     inputNumber.classList.add("error")
+    // }else{
+    //     inputNumber.classList.remove("error")
+    // }
+
+     let formattedValue = '';
 
     for (let i = 0; i < inputValue.length; i++) {
 
