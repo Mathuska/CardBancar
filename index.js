@@ -25,7 +25,7 @@ setInterval(() => {
             currentImage = 1;
             break;
         }
-}, 5000);  
+}, 4000);  
 } 
 
 
