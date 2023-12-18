@@ -2,6 +2,11 @@ const inputNumber = document.querySelector("#card-number-input");
 const numberCard = document.querySelector("#card-number-text");
 let lastNumberCardValue = "#### #### #### ####";
 
+
+
+//hell[]
+
+
 const validCardNumber = () => {
     const inputValue = inputNumber.value.replace(/\s/g, '');
     
